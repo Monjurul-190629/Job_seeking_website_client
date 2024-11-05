@@ -4,7 +4,7 @@ const Footer = ({ darkMode }) => {
     return (
         <div>
             <hr />
-            <footer className={`grid grid-cols-1 lg:grid-cols-3 justify-center text-center gap-10 md:px-10 py-20 ${darkMode ? 'bg-gray-900' : 'bg-blue-800'} ${darkMode ? 'text-white' : 'text-gray-100'}`}>
+            <footer className={`grid grid-cols-1 lg:grid-cols-3 justify-center text-center gap-10 md:px-10 py-20 ${darkMode ? 'bg-gray-900' : 'bg-slate-600'} ${darkMode ? 'text-white' : 'text-gray-100'}`}>
                 <nav className="flex flex-col">
                     <img src="https://png.pngtree.com/element_pic/16/11/02/bd886d7ccc6f8dd8db17e841233c9656.jpg" className="w-1/4 ml-40 md:ml-36 mb-5" />
                     <p className="font-bold text-2xl">SkillTrackers</p>

@@ -14,7 +14,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
         <li><NavLink to="/Add_a_job">Add a Job</NavLink></li>
         <li><NavLink to="/My_jobs">My Jobs</NavLink></li>
         <li><NavLink to="/Blog">Blog</NavLink></li>
-        <li><NavLink to="Not_Founded_Page">Not_Founded_Page</NavLink></li>
+        <li><NavLink to="*">Not_Founded_Page</NavLink></li>
 
     </>
 
@@ -109,10 +109,11 @@ const Navbar = ({ darkMode, toggleTheme }) => {
                                 </>
                         }
                     </div>
+                    <div className={darkMode ? 'divider divider-neutral' : "divider"}></div>
 
                 </div>
             </div>
-            <div className={darkMode ? 'divider divider-neutral' : "divider"}></div>
+            
         </div>
     );
 };
