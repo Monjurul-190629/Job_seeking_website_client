@@ -1,7 +1,35 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Registration = () => {
+
+    const {createUser} = useContext(AuthContext);
+
+    const handleRegistration = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const role = form.role.value;
+        const password = form.password.value;
+        const photourl = form.photourl.value;
+        
+        console.log(name, email, role, password, photourl)
+
+        createUser(email, password)
+          .then(result => {
+            const user = result.user;
+            console.log(user)
+          })
+          .then(e => {
+            console.log(e)
+          })
+
+    }
+
+
     return (
         <div className="">
 
@@ -9,7 +37,7 @@ const Registration = () => {
 
                 <div className="hero-content flex-col lg:flex-row-reverse ">
                     <div className="card shrink-0 w-full max-w-md shadow-2xl bg-purple-600 px-5 md:px-20 py-10">
-                        <form className="card-body text-white font-bold">
+                        <form className="card-body text-white font-bold" onSubmit={handleRegistration}>
                             <h1 className="text-3xl underline font-bold text-center my-5">Registration</h1>
                             <div className="form-control">
                                 <label className="label">
@@ -28,6 +56,20 @@ const Registration = () => {
                                     <span className="label-text text-white">Email</span>
                                 </label>
                                 <input type="email" name="email" placeholder="email" className="input input-bordered text-black" required />
+                            </div>
+                            <div className="form-control mt-4">
+                                <label className="label">
+                                    <span className="label-text text-white">Role</span>
+                                </label>
+                                <select
+                                    name="role"
+                                    className="select select-bordered text-black"
+                                    required
+                                >
+                                    <option value="">Select Role</option>
+                                    <option value="Job_Seeker">Job Seeker</option>
+                                    <option value="Job_Manager">Job Manager</option>
+                                </select>
                             </div>
                             <div className="form-control">
                                 <label className="label">

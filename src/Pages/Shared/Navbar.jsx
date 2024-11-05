@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaUserCircle } from "react-icons/fa";
+import { MdNightlight } from "react-icons/md";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { AuthContext } from '../../Provider/AuthProvider';
 
-const Navbar = () => {
+const Navbar = ({ darkMode, toggleTheme }) => {
 
     const navLink = <>
         <li><NavLink to="/">Home</NavLink></li>
@@ -14,6 +17,15 @@ const Navbar = () => {
         <li><NavLink to="Not_Founded_Page">Not_Founded_Page</NavLink></li>
 
     </>
+
+
+    /// user logout
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogout = () => {
+        logOut()
+            .then(() => console.log("log out successfully"))
+            .catch((error) => console.log(error.message))
+    }
 
     // user profile
     const [isHovered, setIsHovered] = useState(false);
@@ -67,19 +79,35 @@ const Navbar = () => {
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
                             {navLink}
+                            <button onClick={toggleTheme} className="bg-blue-500 hover:bg-black-700 text-white font-bold py-2 px-4 rounded">
+                                {darkMode ? <MdOutlineDarkMode /> : <MdNightlight />}
+                            </button>
                         </ul>
                     </div>
                     <div className='navbar-end'>
-                        <div className="relative text-center" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                            <p className='text-4xl text-blue-600'><FaUserCircle /></p>
-                            {isHovered && (
-                                <ul className=" bg-purple-700 rounded-lg p-5 right-0 absolute font-bold text-white z-20">
-                                    <li className='hover:bg-gray-400 hover:p-1 hover:rounded-lg hover:text-black my-2'><NavLink to="/Login">Login</NavLink></li>
-                                    <hr />
-                                    <li className='hover:bg-gray-400 hover:p-1 hover:rounded-lg hover:text-black my-2'><NavLink to="/Registration">Registration</NavLink></li>
-                                </ul>
-                            )}
-                        </div>
+                        {
+                            user ? <>
+
+                                <div className="tooltip  hover:tooltip-open" data-tip={user.displayName}>
+                                    <span><img src={user.photoURL} className="ml-12 w-1/3 md:w-1/4" /></span>
+                                </div>
+
+                                <a onClick={handleLogout} className="btn btn-sm">Log out</a>
+                            </> :
+                                <>
+
+                                    <div className="relative text-center" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                                        <p className='text-4xl text-blue-600'><FaUserCircle /></p>
+                                        {isHovered && (
+                                            <ul className=" bg-purple-700 rounded-lg p-5 right-0 absolute font-bold text-white z-20">
+                                                <li className='hover:bg-gray-400 hover:p-1 hover:rounded-lg hover:text-black my-2'><NavLink to="/Login">Login</NavLink></li>
+                                                <hr />
+                                                <li className='hover:bg-gray-400 hover:p-1 hover:rounded-lg hover:text-black my-2'><NavLink to="/Registration">Registration</NavLink></li>
+                                            </ul>
+                                        )}
+                                    </div>
+                                </>
+                        }
                     </div>
 
                 </div>
