@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Pages/Shared/Navbar";
 import { useState } from "react";
+import Footer from "../Pages/Shared/Footer";
 
 
 const Main = () => {
@@ -14,9 +15,10 @@ const Main = () => {
 
 
     return (
-        <div className={`${darkMode ? 'bg-gray-900' : 'bg-white'} ${darkMode ? 'text-white' : 'bg-black'} transition-colors duration-500 w-screen`}>
+        <div className={`${darkMode ? 'bg-gray-900' : 'bg-[#efefff]'} ${darkMode ? 'text-white' : 'bg-black'} transition-colors duration-500 w-screen`}>
             <Navbar darkMode = {darkMode} toggleTheme = {toggleTheme}></Navbar>
             <Outlet></Outlet>
+            <Footer  darkMode = {darkMode}></Footer>
         </div>
     );
 };

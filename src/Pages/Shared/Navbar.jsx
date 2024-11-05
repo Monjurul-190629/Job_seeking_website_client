@@ -112,6 +112,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
 
                 </div>
             </div>
+            <div className={darkMode ? 'divider divider-neutral' : "divider"}></div>
         </div>
     );
 };
