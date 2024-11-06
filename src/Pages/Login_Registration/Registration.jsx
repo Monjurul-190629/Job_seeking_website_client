@@ -41,30 +41,30 @@ const Registration = () => {
         <div className="">
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="card shrink-0 w-full max-w-md shadow-2xl bg-gradient-to-r from-blue-500 to-blue-900 px-5 md:px-10 py-10">
-                        <form className="card-body text-white font-bold" onSubmit={handleRegistration}>
+                    <div className="card shrink-0 w-full max-w-md shadow-2xl bg-gradient-to-r from-slate-300 to-slate-600 px-5 md:px-10 py-10">
+                        <form className="card-body text-black font-bold" onSubmit={handleRegistration}>
                             <h1 className="text-3xl underline font-bold text-center my-5">Registration</h1>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text text-white">Name</span>
+                                    <span className="label-text text-black">Name</span>
                                 </label>
                                 <input type="text" name="name" placeholder="name" className="input input-bordered text-black" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text text-white">PhotoUrl</span>
+                                    <span className="label-text text-black">PhotoUrl</span>
                                 </label>
                                 <input type="text" name="photourl" placeholder="photourl" className="input input-bordered text-black" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text text-white">Email</span>
+                                    <span className="label-text text-black">Email</span>
                                 </label>
                                 <input type="email" name="email" placeholder="email" className="input input-bordered text-black" required />
                             </div>
                             <div className="form-control mt-4">
                                 <label className="label">
-                                    <span className="label-text text-white">Role</span>
+                                    <span className="label-text text-black">Role</span>
                                 </label>
                                 <select
                                     name="role"
@@ -78,15 +78,15 @@ const Registration = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text text-white">Password</span>
+                                    <span className="label-text text-black">Password</span>
                                 </label>
                                 <input type="password" name="password" placeholder="password" className="input input-bordered text-black" required />
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-blue-700 hover:bg-white hover:text-blue-700 text-white font-bold">Registration</button>
+                                <button className="btn bg-blue-700 hover:bg-blue-900 hover:text-white text-white font-bold">Registration</button>
                             </div>
                         </form>
-                        <p className="text-center text-white font-bold">Already Have an account? Please <Link to="/Login"><button className="bg-blue-500 text-white py-2 px-3 rounded-lg">Login</button></Link></p>
+                        <p className="text-center text-black font-bold">Already Have an account? Please <Link to="/Login"><button className="bg-blue-800 hover:bg-blue-950 text-white py-2 px-3 rounded-lg">Login</button></Link></p>
                     </div>
                 </div>
             </div>

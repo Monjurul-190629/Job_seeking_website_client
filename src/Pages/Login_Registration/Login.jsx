@@ -52,23 +52,23 @@ const Login = () => {
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-gradient-to-r from-blue-400 to-blue-700 px-5 md:p-10">
-                    <form className="card-body text-white font-bold" onSubmit={handleLogin}>
+                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-gradient-to-r from-slate-300 to-slate-500  px-5 md:p-10">
+                    <form className="card-body text-slate-900 font-bold" onSubmit={handleLogin}>
                         <h1 className="text-3xl underline font-bold text-center my-5">Login now!</h1>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white">Email</span>
+                                <span className="label-text text-slate-900">Email</span>
                             </label>
                             <input type="email" name="email" placeholder="email" className="input input-bordered text-black" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text text-white">Password</span>
+                                <span className="label-text text-slate-900">Password</span>
                             </label>
                             <input type="password" name="password" placeholder="password" className="input input-bordered text-black" required />
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn bg-blue-600 text-white hover:bg-white hover:text-blue-700">Login</button>
+                            <button className="btn hover:bg-blue-700 bg-blue-950 hover:text-slate-200  text-white">Login</button>
                         </div>
                     </form>
                     <div className="flex gap-5 justify-center my-5 text-center">
@@ -76,7 +76,7 @@ const Login = () => {
                             <FaGoogle />
                         </button>
                     </div>
-                    <p className="text-center text-white font-bold">
+                    <p className="text-center text-slate-900 font-bold">
                         New here? Please <Link to="/Registration"><button className="bg-purple-900 text-white font-bold py-2 px-3 rounded-lg">Register</button></Link>
                     </p>
                 </div>
