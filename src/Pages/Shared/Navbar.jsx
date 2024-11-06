@@ -99,7 +99,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
                                     <div className="relative text-center" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                                         <p className='text-4xl text-blue-600'><FaUserCircle /></p>
                                         {isHovered && (
-                                            <ul className=" bg-purple-700 rounded-lg p-5 right-0 absolute font-bold text-white z-20">
+                                            <ul className=" bg-gradient-to-r from-blue-900 to-orange-300 rounded-lg p-5 right-0 absolute font-bold text-white z-20">
                                                 <li className='hover:bg-gray-400 hover:p-1 hover:rounded-lg hover:text-black my-2'><NavLink to="/Login">Login</NavLink></li>
                                                 <hr />
                                                 <li className='hover:bg-gray-400 hover:p-1 hover:rounded-lg hover:text-black my-2'><NavLink to="/Registration">Registration</NavLink></li>

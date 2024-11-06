@@ -15,7 +15,7 @@ const Main = () => {
 
 
     return (
-        <div className={`${darkMode ? 'bg-gray-900' : 'bg-[#efefff]'} ${darkMode ? 'text-white' : 'bg-black'} transition-colors duration-500 w-screen`}>
+        <div className={`${darkMode ? 'bg-gray-900' : 'bg-[#f4f4fe]'} ${darkMode ? 'text-white' : 'bg-black'} transition-colors duration-500 w-screen`}>
             <Navbar darkMode = {darkMode} toggleTheme = {toggleTheme}></Navbar>
             <Outlet></Outlet>
             <Footer  darkMode = {darkMode}></Footer>
