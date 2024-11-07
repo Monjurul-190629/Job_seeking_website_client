@@ -3,12 +3,14 @@ import { AuthContext } from "../Provider/AuthProvider";
 import Applied_table from "./Applied_table";
 
 const Applied_jobs = () => {
-    
+
     const { user } = useContext(AuthContext);
     const [jobs, setJobs] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('All');
 
     const url = `http://localhost:5000/appliedJobs?email=${user?.email}`;
+    console.log("Sending request to:", url);  // Check the URL before sending the request
+
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -70,7 +72,7 @@ const Applied_jobs = () => {
                         <p className="font-semibold"><span className="font-bold">Job Title:</span> {job.Job_title}</p>
                         <p className="font-semibold"><span className="font-bold">Job Description:</span> {job.Job_description}</p>
                         <p className="font-semibold"><span className="font-bold">Salary Range:</span> {job.Salary_range}</p>
-                        <p className="font-semibold"><span className="font-bold">Resume Link:</span> 
+                        <p className="font-semibold"><span className="font-bold">Resume Link:</span>
                             <a href={job.resumeLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800"> View Resume</a>
                         </p>
                     </div>

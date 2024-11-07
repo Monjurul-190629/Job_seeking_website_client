@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
+import Swal from 'sweetalert2';
+import Table_1 from './Table_1';
 
 const My_jobs = () => {
 
@@ -6,9 +9,11 @@ const My_jobs = () => {
 
     const [jobs, setJobs] = useState([]);
 
+    console.log(user.email)
+
     const [selectedCategory, setSelectedCategory] = useState('All');
 
-    const url = `https://job-seeking-website-server.vercel.app/jobs?email=${user?.email}`;
+    const url = `http://localhost:5000/jobs?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -29,7 +34,7 @@ const My_jobs = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 // Perform delete action
-                fetch(`https://job-seeking-website-server.vercel.app/jobs/${id}`, {
+                fetch(`http://localhost:5000/jobs/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
