@@ -14,7 +14,7 @@ const ViewDetails = () => {
     const [resumeLink, setResumeLink] = useState('');
 
     const { user } = useContext(AuthContext);
-
+    console.log(user.email)
 
     const { Banner_url,
         Job_title,
@@ -23,7 +23,7 @@ const ViewDetails = () => {
         Job_applicants_number,
         applicationDeadline,
         jobCategory } = job;
-
+        
 
 
     // Check if the deadline is over
@@ -49,12 +49,13 @@ const ViewDetails = () => {
             Job_description,
             resumeLink,
             jobCategory,
+            email : user.email
 
         }
         console.log(data1)
         console.log("submit is done now")
 
-        fetch("http://localhost:5000/jobs", {
+        fetch("http://localhost:5000/appliedJobs", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -67,7 +68,7 @@ const ViewDetails = () => {
                 if (data.insertedId) {
                     swal.fire({
                         title: 'Success!',
-                        text: 'new job added successfully',
+                        text: 'Applied successfully',
                         icon: 'success',
                         confirmButtonText: 'Cool'
 
@@ -85,7 +86,7 @@ const ViewDetails = () => {
     return (
         <div>
             <div className=" px-4 my-1 rounded-2xl mx-auto text-white text-center">
-                <div className=" bg-gradient-to-r from-blue-800 to-purple-800 px-5 pb-10 pt-10  rounded-2xl">
+                <div className=" bg-gradient-to-r from-blue-600 to-purple-600 px-5 pb-10 pt-10  rounded-2xl">
                     <div className="flex justify-center mb-10">
                         <img src={Banner_url} alt="" className=" h-48" /><br />
                     </div>
@@ -104,7 +105,7 @@ const ViewDetails = () => {
                     {/* Open the modal using document.getElementById('ID').showModal() method */}
                     <button className="btn bg-orange-500 text-white font-bold hover:text-black" onClick={() => document.getElementById('my_modal_5').showModal()}>Apply</button>
                     <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-                        <div className="modal-box bg-purple-600">
+                        <div className="modal-box bg-purple-700">
                             <h3 className="font-bold text-lg mb-5 underline">Apply for : {Job_title}</h3>
                             <p className="py-1 t font-bold">Logged in as: {user.displayName}</p>
                             <p className="py-1 t font-bold">Email: {user.email}</p>

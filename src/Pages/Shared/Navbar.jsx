@@ -19,6 +19,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
     );
 
     const { user, logOut } = useContext(AuthContext);
+    
     const handleLogout = () => {
         logOut()
             .then(() => console.log("Log out successful"))
@@ -52,7 +53,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
                 </div>
 
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-4 py-2 items-center space-x-4">
+                    <ul className="menu menu-horizontal px-5 py-2 items-center space-x-1">
                         {navLink}
                         <button onClick={toggleTheme} className="bg-blue-500 rounded-full p-2 hover:bg-black-700 text-white font-bold px-4 rounded">
                             {darkMode ? <MdOutlineDarkMode /> : <MdNightlight />}

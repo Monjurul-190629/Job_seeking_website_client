@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Registration = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const handleRegistration = (e) => {
         e.preventDefault();
@@ -20,12 +21,17 @@ const Registration = () => {
         createUser(email, password)
             .then(result => {
                 const user = result.user;
+                user.displayName = name;
+                user.photoURL = photourl;
+                user.role = role;
                 console.log(user);
                 Swal.fire({
                     title: 'Wow!',
                     text: 'Successfully Registered',
                     icon: 'success',
                 });
+                logOut();
+                navigate("/Login");
             })
             .catch(error => {
                 console.error("Registration error:", error.message);
@@ -41,7 +47,7 @@ const Registration = () => {
         <div className="">
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="card shrink-0 w-full max-w-md shadow-2xl bg-gradient-to-r from-slate-300 to-slate-600 px-5 md:px-10 py-10">
+                    <div className="card shrink-0 w-full max-w-md shadow-2xl bg-gradient-to-r from-slate-500 to-slate-400 px-5 md:px-10 py-10">
                         <form className="card-body text-black font-bold" onSubmit={handleRegistration}>
                             <h1 className="text-3xl underline font-bold text-center my-5">Registration</h1>
                             <div className="form-control">
@@ -86,7 +92,7 @@ const Registration = () => {
                                 <button className="btn bg-blue-700 hover:bg-blue-900 hover:text-white text-white font-bold">Registration</button>
                             </div>
                         </form>
-                        <p className="text-center text-black font-bold">Already Have an account? Please <Link to="/Login"><button className="bg-blue-800 hover:bg-blue-950 text-white py-2 px-3 rounded-lg">Login</button></Link></p>
+                        <p className="text-center text-black font-bold">Already Have an account? Please <Link to="/Login"><button className="bg-blue-700 hover:bg-blue-950 text-white py-2 px-3 rounded-lg">Login</button></Link></p>
                     </div>
                 </div>
             </div>

@@ -52,7 +52,7 @@ const Login = () => {
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-gradient-to-r from-slate-300 to-slate-500  px-5 md:p-10">
+                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-gradient-to-r from-slate-500 to-slate-400  px-5 md:p-10">
                     <form className="card-body text-slate-900 font-bold" onSubmit={handleLogin}>
                         <h1 className="text-3xl underline font-bold text-center my-5">Login now!</h1>
                         <div className="form-control">

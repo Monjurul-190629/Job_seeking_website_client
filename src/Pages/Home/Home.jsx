@@ -17,7 +17,7 @@ const Home = () => {
                     <div className='font-bold text-center text-4xl underline py-10'>
                         About SkillTrackers
                     </div>
-                    <div className="md:px-20 px-4 py-10 bg-gradient-to-r from-slate-300 to-slate-500 text-slate-900 rounded-xl text-white text-justify">
+                    <div className="md:px-20 px-4 py-10 bg-gradient-to-r from-slate-700 to-slate-400 text-slate-900 rounded-xl text-white text-justify">
 
                         <div className="flex flex-col lg:flex-row-reverse gap-5 md:gap-10 md:justify-center">
                             <div className='md:flex-1'>
@@ -52,7 +52,7 @@ const Home = () => {
                     className="p-8  rounded-lg shadow-lg"
                 >
                     <div className='flex justify-center flex-col md:flex-row gap-5 md:gap-10 mx-5'>
-                        <div className="card w-96 shadow-xl bg-gradient-to-r from-slate-500 to-slate-300 my-10 text-slate-900">
+                        <div className="card w-96 shadow-xl bg-gradient-to-r from-slate-500 to-slate-400 my-10 text-slate-900">
                             <figure className="px-5 md:px-10 pt-10">
                                 <img src="https://assets.mycast.io/actor_images/actor-johnny-depp-163036_large.jpg?1610216546" alt="" className="rounded-full max-w-32" />
                             </figure>
@@ -66,7 +66,7 @@ const Home = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="card w-96 shadow-xl bg-gradient-to-r from-slate-300 to-slate-500 my-10 text-slate-900">
+                        <div className="card w-96 shadow-xl bg-gradient-to-r from-slate-500 to-slate-400 my-10 text-slate-900">
                             <figure className="px-5 md:px-10 pt-10">
                                 <img src="https://i.pinimg.com/736x/44/9e/3e/449e3e0d23bd1a33e448cc95ea44a598.jpg" alt="" className="rounded-full max-w-40" />
                             </figure>

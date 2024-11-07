@@ -77,7 +77,7 @@ const AddJobs = () => {
             <div className="hero min-h-screen">
 
                 <div className="hero-content flex-col lg:flex-row-reverse ">
-                    <div className="card shrink-0 w-full  shadow-2xl bg-gradient-to-r from-slate-600 to-purple-700 px-5 md:px-20 py-10">
+                    <div className="card shrink-0 w-full  shadow-2xl bg-gradient-to-r from-blue-600 to-purple-700 px-5 md:px-20 py-10">
                         <form className="card-body text-white font-bold" onSubmit={handleAddJob} >
                             <h1 className="text-3xl underline font-bold text-center my-5">Add a Job</h1>
                             <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
