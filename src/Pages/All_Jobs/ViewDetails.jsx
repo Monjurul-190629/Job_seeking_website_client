@@ -55,7 +55,7 @@ const ViewDetails = () => {
         console.log(data1)
         console.log("submit is done now")
 
-        fetch("http://localhost:5000/appliedJobs", {
+        fetch("https://jobseekingserver.vercel.app/appliedJobs", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

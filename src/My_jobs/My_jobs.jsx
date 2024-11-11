@@ -13,7 +13,7 @@ const My_jobs = () => {
 
     const [selectedCategory, setSelectedCategory] = useState('All');
 
-    const url = `http://localhost:5000/jobs?email=${user?.email}`;
+    const url = `https://jobseekingserver.vercel.app/jobs?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
@@ -34,7 +34,7 @@ const My_jobs = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 // Perform delete action
-                fetch(`http://localhost:5000/jobs/${id}`, {
+                fetch(`https://jobseekingserver.vercel.app/jobs/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

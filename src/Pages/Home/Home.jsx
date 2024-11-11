@@ -53,11 +53,11 @@ const Home = () => {
                 >
                     <div className="flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-10 mx-2 sm:mx-5 lg:mx-10">
                         {/* Card 1 */}
-                        <div className="card w-full sm:w-80 lg:w-96 shadow-xl bg-gradient-to-r from-slate-500 to-slate-400 my-5 lg:my-10 text-slate-900">
-                            <figure className="px-5 lg:px-10 lg:pt-12 pt-10 flex justify-center">
+                        <div className="card w-full sm:w-80 lg:w-96 shadow-xl bg-gradient-to-r from-slate-500 to-slate-400 my-5  text-slate-900">
+                            <figure className="px-5 lg:px-10 pt-10 lg:pt-12 flex justify-center">
                                 <img src="https://assets.mycast.io/actor_images/actor-johnny-depp-163036_large.jpg?1610216546" alt="" className="rounded-full w-32 h-32 object-cover" />
                             </figure>
-                            <div className="card-body items-center text-center p-5 ">
+                            <div className="card-body items-center text-center p-5 lg:pb-10">
                                 <h2 className="card-title text-lg lg:text-2xl">
                                     <span className="text-xl lg:text-2xl">Board Member,</span> <small>SkillTrackers</small>
                                 </h2>

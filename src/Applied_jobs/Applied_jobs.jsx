@@ -8,7 +8,7 @@ const Applied_jobs = () => {
     const [jobs, setJobs] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('All');
 
-    const url = `http://localhost:5000/appliedJobs?email=${user?.email}`;
+    const url = `https://jobseekingserver.vercel.app/appliedJobs?email=${user?.email}`;
     console.log("Sending request to:", url);  // Check the URL before sending the request
 
     useEffect(() => {
