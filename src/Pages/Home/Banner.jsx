@@ -33,7 +33,7 @@ const Banner = () => {
                     disableOnInteraction: false // To ensure autoplay continues after user interaction
                 }}
             >
-                <SwiperSlide className='banner-slide'><img src="https://i.ibb.co/3FwFn6W/job-posting-website-900x500.jpg" className='w-screen h-[600px] banner-image ' />
+                <SwiperSlide className='banner-slide '><img src="https://i.ibb.co/3FwFn6W/job-posting-website-900x500.jpg" className='w-screen h-[600px] banner-image ' />
                     <div className="banner-content">
                         <h1 className='text-white font-bold text-2xl md:text-4xl mb-5'>Welcome to Our Job-Website</h1>
                         <p className='text-white font-bold md:text-xl text-justify'>Find your dream job today! Browse thousands of job listings, explore various industries, and apply online effortlessly. Whether you're a seasoned professional or just starting your career journey, our platform offers opportunities for everyone. Join us today and take the next step towards your future success!</p>

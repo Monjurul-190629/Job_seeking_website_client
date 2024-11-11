@@ -85,27 +85,27 @@ const ViewDetails = () => {
 
     return (
         <div>
-            <div className=" px-4 my-1 rounded-2xl mx-auto text-white text-center">
-                <div className=" bg-gradient-to-r from-blue-600 to-purple-600 px-5 pb-10 pt-10  rounded-2xl">
+            <div className=" lg:px-4 px-6 my-1 rounded-2xl mx-auto text-center">
+                <div className=" bg-gradient-to-r from-gray-300 to-slate-500 px-5 pb-10 pt-10  rounded-2xl">
                     <div className="flex justify-center mb-10">
                         <img src={Banner_url} alt="" className=" h-48" /><br />
                     </div>
-                    <div className="text-gray-300 flex gap-5 font-semibold justify-center mb-10">
+                    <div className="text-gray-800 flex gap-5 font-semibold justify-center mb-4 lg:mb-10">
                         <h3 className="text-xl md:text-3xl">#{Job_title}</h3>
                     </div>
 
-                    <div className="font-bold text-center text-gray-300">
-                        <span className="underline text-xl">Short Description</span> : {Job_description}
+                    <div className="font-bold text-center text-gray-800">
+                        <span className="underline text-xl mb-4 lg:mb-10">Short Description</span> : {Job_description}
                     </div>
-                    <h3 className="text-2xl text-gray-300 font-semibold my-8 mb-10">Salary_Range: {Salary_range}</h3>
-                    <h2 className="text-xl font-semibold my-4 text-gray-200">Total Applicants Number: {Job_applicants_number}</h2>
+                    <h3 className="text-2xl text-gray-800 font-semibold mb-4 lg:mb-10">Salary_Range: {Salary_range}</h3>
+                    <h2 className="text-xl font-semibold my-4 text-gray-800">Total Applicants Number: {Job_applicants_number}</h2>
 
 
 
                     {/* Open the modal using document.getElementById('ID').showModal() method */}
-                    <button className="btn bg-orange-500 text-white font-bold hover:text-black" onClick={() => document.getElementById('my_modal_5').showModal()}>Apply</button>
-                    <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-                        <div className="modal-box bg-purple-700">
+                    <button className="btn bg-blue-600 text-white font-bold hover:text-black" onClick={() => document.getElementById('my_modal_5').showModal()}>Apply</button>
+                    <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle ">
+                        <div className="modal-box bg-slate-400 m-0">
                             <h3 className="font-bold text-lg mb-5 underline">Apply for : {Job_title}</h3>
                             <p className="py-1 t font-bold">Logged in as: {user.displayName}</p>
                             <p className="py-1 t font-bold">Email: {user.email}</p>

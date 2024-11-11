@@ -49,39 +49,42 @@ const Home = () => {
                     initial={{ opacity: 0.5, scale: 0.3 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 2.1 }}
-                    className="p-8  rounded-lg shadow-lg"
+                    className="p-4 lg:p-8 rounded-lg shadow-lg"
                 >
-                    <div className='flex justify-center flex-col md:flex-row gap-5 md:gap-10 mx-5'>
-                        <div className="card w-96 shadow-xl bg-gradient-to-r from-slate-500 to-slate-400 my-10 text-slate-900">
-                            <figure className="px-5 md:px-10 pt-10">
-                                <img src="https://assets.mycast.io/actor_images/actor-johnny-depp-163036_large.jpg?1610216546" alt="" className="rounded-full max-w-32" />
+                    <div className="flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-10 mx-2 sm:mx-5 lg:mx-10">
+                        {/* Card 1 */}
+                        <div className="card w-full sm:w-80 lg:w-96 shadow-xl bg-gradient-to-r from-slate-500 to-slate-400 my-5 lg:my-10 text-slate-900">
+                            <figure className="px-5 lg:px-10 lg:pt-12 pt-10 flex justify-center">
+                                <img src="https://assets.mycast.io/actor_images/actor-johnny-depp-163036_large.jpg?1610216546" alt="" className="rounded-full w-32 h-32 object-cover" />
                             </figure>
-                            <div className="card-body items-center text-center">
-                                <h2 className="card-title"><span className='text-2xl'>Broad Member,</span> <small>SkillTrackers</small></h2>
-                                <p className='text-justify'>
-                                    Dep's leadership is marked by his proactive approach and his ability to motivate
-                                    and inspire his team. He fosters an environment of open communication, encouraging
-                                    creativity and innovation among team members. His knack for identifying.
-
+                            <div className="card-body items-center text-center p-5 ">
+                                <h2 className="card-title text-lg lg:text-2xl">
+                                    <span className="text-xl lg:text-2xl">Board Member,</span> <small>SkillTrackers</small>
+                                </h2>
+                                <p className="text-justify text-sm lg:text-base">
+                                    Depp's leadership is marked by his proactive approach and his ability to motivate and inspire his team. He fosters an environment of open communication, encouraging creativity and innovation among team members. His knack for identifying talent has proven invaluable.
                                 </p>
                             </div>
                         </div>
-                        <div className="card w-96 shadow-xl bg-gradient-to-r from-slate-500 to-slate-400 my-10 text-slate-900">
-                            <figure className="px-5 md:px-10 pt-10">
-                                <img src="https://i.pinimg.com/736x/44/9e/3e/449e3e0d23bd1a33e448cc95ea44a598.jpg" alt="" className="rounded-full max-w-40" />
-                            </figure>
-                            <div className="card-body items-center text-center">
-                                <h2 className="card-title"><span className='text-2xl'>Broad Member,</span> <small>SkillTrackers</small></h2>
-                                <p className='text-justify'>Brad Pitt is a visionary leader with a passion for innovation and
-                                    a deep commitment to transforming the job-seeking landscape.
-                                    His strategic thinking and ability to build
-                                    strong partnerships have been instrumental in expanding the platform's reach and impact.
 
+                        {/* Card 2 */}
+                        <div className="card w-full sm:w-80 lg:w-96 shadow-xl bg-gradient-to-r from-slate-500 to-slate-400 my-5  text-slate-900">
+                            <figure className="px-5 lg:px-10 pt-10 lg:pt-12 flex justify-center">
+                                <img src="https://i.pinimg.com/736x/44/9e/3e/449e3e0d23bd1a33e448cc95ea44a598.jpg" alt="" className="rounded-full w-32 h-32 object-cover" />
+                            </figure>
+                            <div className="card-body items-center text-center p-5 lg:pb-10">
+                                <h2 className="card-title text-lg lg:text-2xl">
+                                    <span className="text-xl lg:text-2xl">Board Member,</span> <small>SkillTrackers</small>
+                                </h2>
+                                <p className="text-justify text-sm lg:text-base">
+                                    Brad Pitt is a visionary leader with a passion for innovation and a deep commitment to transforming the job-seeking landscape. His strategic thinking and ability to build strong partnerships have been instrumental in expanding the platform's reach and impact.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </motion.div>
+
+
             </div>
 
         </div>

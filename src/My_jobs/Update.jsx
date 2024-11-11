@@ -78,52 +78,52 @@ const Update = () => {
             <div className="hero min-h-screen">
 
                 <div className="hero-content flex-col lg:flex-row-reverse ">
-                    <div className="card shrink-0 w-full  shadow-2xl bg-purple-700 px-5 md:px-20 py-10">
-                        <form className="card-body text-white font-bold" onSubmit={handleUpdate} >
+                    <div className="card shrink-0 w-full  shadow-2xl bg-gray-400 px-5 md:px-20 py-10">
+                        <form className="card-body text-slate-900 font-bold" onSubmit={handleUpdate} >
                             <h1 className="text-3xl underline font-bold text-center my-5">Update Job</h1>
                             <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-white">Banner Url</span>
+                                        <span className="label-text text-slate-900">Banner Url</span>
                                     </label>
                                     <input type="text" name="banner_url" placeholder="Banner url" defaultValue={Banner_url} className="input input-bordered text-black" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-white">Job Title</span>
+                                        <span className="label-text text-slate-900">Job Title</span>
                                     </label>
                                     <input type="text" name="job_title" placeholder="Job title" defaultValue={Job_title} className="input input-bordered text-black" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-white">Name</span>
+                                        <span className="label-text text-slate-900">Name</span>
                                     </label>
                                     <input type="text" name="name" placeholder="Name" defaultValue={name} className="input input-bordered text-black" required />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-white">Email</span>
+                                        <span className="label-text text-slate-900">Email</span>
                                     </label>
                                     <input type="email" name="email" placeholder="email" defaultValue={email} className="input input-bordered text-black" required />
                                 </div>
 
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-white">Salary range</span>
+                                        <span className="label-text text-slate-900">Salary range</span>
                                     </label>
                                     <input type="text" name="Salary_range" placeholder="salary-range" defaultValue={Salary_range} className="input input-bordered text-black" required />
 
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-white">Job description</span>
+                                        <span className="label-text text-slate-900">Job description</span>
                                     </label>
                                     <input type="text" name="Job_description" placeholder="job-description" defaultValue={Job_description} className="input input-bordered text-black" required />
 
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-white">Job Posting Date</span>
+                                        <span className="label-text text-slate-900">Job Posting Date</span>
                                     </label>
                                     <input type="date" name="Job_posting_date" className="input input-bordered text-black" defaultValue={Job_posting_date} required />
 
@@ -131,14 +131,14 @@ const Update = () => {
 
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text text-white">Job Applicants Number</span>
+                                        <span className="label-text text-slate-900">Job Applicants Number</span>
                                     </label>
                                     <input type="text" name="Job_application_number" placeholder="Applicants Number" defaultValue={Job_applicants_number}  className="input input-bordered text-black" required />
 
                                 </div>
                             </div>
                             <div className="form-control mt-10">
-                                <button className="btn bg-blue-700 font-bold text-white hover:text-black">Update</button>
+                                <button className="btn bg-gray-300 font-bold text-slate-900 hover:text-white hover:bg-slate-800">Update</button>
                             </div>
 
                         </form>

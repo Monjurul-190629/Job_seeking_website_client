@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import { db } from "../../firebase/firebase.config";
+import { setDoc, doc } from "firebase/firestore";
 
 const Registration = () => {
     const { createUser, logOut } = useContext(AuthContext);
@@ -16,22 +18,36 @@ const Registration = () => {
         const password = form.password.value;
         const photourl = form.photourl.value;
 
-        console.log(name, email, role, password, photourl);
-
         createUser(email, password)
             .then(result => {
                 const user = result.user;
-                user.displayName = name;
-                user.photoURL = photourl;
-                user.role = role;
-                console.log(user);
-                Swal.fire({
-                    title: 'Wow!',
-                    text: 'Successfully Registered',
-                    icon: 'success',
-                });
-                logOut();
-                navigate("/Login");
+
+                // Save user data to Firestore
+                if (user) {
+                    setDoc(doc(db, "Users", user.uid), {
+                        email: email,
+                        role: role,
+                        displayName: name,
+                        photoURL: photourl
+                    })
+                    .then(() => {
+                        Swal.fire({
+                            title: 'Wow!',
+                            text: 'Successfully Registered',
+                            icon: 'success',
+                        });
+                        logOut();
+                        navigate("/Login");
+                    })
+                    .catch(error => {
+                        console.error("Firestore error:", error.message);
+                        Swal.fire({
+                            title: 'Error!',
+                            text: 'Failed to save user data.',
+                            icon: 'error',
+                        });
+                    });
+                }
             })
             .catch(error => {
                 console.error("Registration error:", error.message);
@@ -72,11 +88,7 @@ const Registration = () => {
                                 <label className="label">
                                     <span className="label-text text-black">Role</span>
                                 </label>
-                                <select
-                                    name="role"
-                                    className="select select-bordered text-black"
-                                    required
-                                >
+                                <select name="role" className="select select-bordered text-black" required>
                                     <option value="">Select Role</option>
                                     <option value="Job_Seeker">Job Seeker</option>
                                     <option value="Job_Manager">Job Manager</option>

@@ -26,7 +26,7 @@ const Applied_jobs = () => {
         : jobs.filter(job => job.jobCategory.toLowerCase().trim() === selectedCategory.toLowerCase().trim());
 
     return (
-        <div className="bg-purple-600 text-white py-10 px-5 rounded-xl">
+        <div className="bg-slate-400 text-black py-10 px-5 rounded-xl">
             <h2 className="text-2xl mb-5 text-center font-bold">Your Jobs: {filteredJobs.length}</h2>
             <div className="mb-5">
                 <label htmlFor="category" className="font-bold">Filter by Category:</label>
@@ -48,7 +48,7 @@ const Applied_jobs = () => {
             <div className="overflow-x-auto hidden lg:block">
                 <table className="min-w-full bg-white text-black rounded-lg shadow-lg">
                     <thead>
-                        <tr className="bg-purple-800 text-white">
+                        <tr className="bg-slate-500 text-white">
                             <th className="py-4 px-6 text-left font-semibold">Job Category</th>
                             <th className="py-4 px-6 text-left font-semibold">Job Title</th>
                             <th className="py-4 px-6 text-left font-semibold">Job Description</th>
