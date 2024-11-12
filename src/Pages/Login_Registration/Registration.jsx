@@ -63,42 +63,32 @@ const Registration = () => {
         <div className="">
             <div className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="card shrink-0 w-full max-w-md shadow-2xl bg-gradient-to-r from-slate-500 to-slate-400 px-5 md:px-10 py-10">
-                        <form className="card-body text-black font-bold" onSubmit={handleRegistration}>
-                            <h1 className="text-3xl underline font-bold text-center my-5">Registration</h1>
+                    <div className="card shrink-0 w-full max-w-md shadow-2xl bg-[#ede9ff] border-2 border-slate-400 px-5 md:px-10 py-10">
+                        <form className="card-body text-black font-semibold" onSubmit={handleRegistration}>
+                            <h1 className="text-3xl font-semibold text-center mb-5">Registration</h1>
                             <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-black">Name</span>
-                                </label>
-                                <input type="text" name="name" placeholder="name" className="input input-bordered text-black" required />
+                                
+                                <input type="text" name="name" placeholder="name" className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[250px] placeholder-slate-600 bg-[#ede9ff]" required />
                             </div>
                             <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-black">PhotoUrl</span>
-                                </label>
-                                <input type="text" name="photourl" placeholder="photourl" className="input input-bordered text-black" required />
+                                
+                                <input type="text" name="photourl" placeholder="photourl" className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[250px] placeholder-slate-600 bg-[#ede9ff]" required />
                             </div>
                             <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-black">Email</span>
-                                </label>
-                                <input type="email" name="email" placeholder="email" className="input input-bordered text-black" required />
+                                
+                                <input type="email" name="email" placeholder="email" className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[250px] placeholder-slate-600 bg-[#ede9ff]" required />
                             </div>
                             <div className="form-control mt-4">
-                                <label className="label">
-                                    <span className="label-text text-black">Role</span>
-                                </label>
-                                <select name="role" className="select select-bordered text-black" required>
+                              
+                                <select name="role" clclassName="text-black border-b-2 border-slate-500 outline-0 py-2 w-[250px] placeholder-slate-600 bg-[#ede9ff]" required>
                                     <option value="">Select Role</option>
                                     <option value="Job_Seeker">Job Seeker</option>
                                     <option value="Job_Manager">Job Manager</option>
                                 </select>
                             </div>
                             <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text text-black">Password</span>
-                                </label>
-                                <input type="password" name="password" placeholder="password" className="input input-bordered text-black" required />
+                                
+                                <input type="password" name="password" placeholder="password" className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[250px] placeholder-slate-600 bg-[#ede9ff]" required />
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn bg-blue-700 hover:bg-blue-900 hover:text-white text-white font-bold">Registration</button>

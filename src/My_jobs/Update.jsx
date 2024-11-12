@@ -1,6 +1,8 @@
+import { useContext } from 'react';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../Provider/AuthProvider';
 
 
 
@@ -8,6 +10,8 @@ import Swal from 'sweetalert2';
 const Update = () => {
 
     const job = useLoaderData();
+
+    const { darkMode, toggleTheme } = useContext(AuthContext);
 
     const { Banner_url,
         Job_title,
@@ -79,52 +83,55 @@ const Update = () => {
 
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card shrink-0 w-full  shadow-2xl border-2 border-slate-400 px-5 md:px-5 py-5">
-                        <form className="card-body text-black px-10" onSubmit={handleUpdate} >
-                            <h1 className="text-2xl font-bold text-center mb-5">Update Job</h1>
-                            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-                                <div className="form-control">
-                                    <input type="text" name="banner_url" placeholder="Banner url" defaultValue={Banner_url} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
+                        <div className={`${darkMode ? 'bg-[#e1ddf4]' : 'bg-[#ede9ff]'} ${darkMode ? 'text-black' : 'text-black'} transition-colors duration-500 `}>
+                            <form className="card-body px-10" onSubmit={handleUpdate} >
+                                <h1 className="text-2xl font-bold text-center mb-5">Update Job</h1>
+                                <div className='grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8'>
+                                    <div className="form-control">
+                                        <input type="text" name="banner_url" placeholder="Banner url" defaultValue={Banner_url} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
+                                    </div>
+                                    <div className="form-control">
+
+                                        <input type="text" name="job_title" placeholder="Job title" defaultValue={Job_title} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
+                                    </div>
+                                    <div className="form-control">
+
+                                        <input type="text" name="name" placeholder="Name" defaultValue={name} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
+                                    </div>
+                                    <div className="form-control">
+
+                                        <input type="email" name="email" placeholder="email" defaultValue={email} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
+                                    </div>
+
+                                    <div className="form-control">
+
+                                        <input type="text" name="Salary_range" placeholder="salary-range" defaultValue={Salary_range} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
+
+                                    </div>
+                                    <div className="form-control">
+
+                                        <input type="text" name="Job_description" placeholder="job-description" defaultValue={Job_description} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
+
+                                    </div>
+                                    <div className="form-control">
+
+                                        <input type="date" name="Job_posting_date" className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" defaultValue={Job_posting_date} required />
+
+                                    </div>
+
+                                    <div className="form-control">
+
+                                        <input type="text" name="Job_application_number" placeholder="Applicants Number" defaultValue={Job_applicants_number} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
+
+                                    </div>
                                 </div>
-                                <div className="form-control">
-                                    
-                                    <input type="text" name="job_title" placeholder="Job title" defaultValue={Job_title} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
-                                </div>
-                                <div className="form-control">
-                                   
-                                    <input type="text" name="name" placeholder="Name" defaultValue={name} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
-                                </div>
-                                <div className="form-control">
-                                    
-                                    <input type="email" name="email" placeholder="email" defaultValue={email} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
+                                <div className="form-control mt-5 md:mt-10">
+                                    <button className="btn bg-gray-400 font-bold text-slate-900 hover:text-white hover:bg-slate-800">Update</button>
                                 </div>
 
-                                <div className="form-control">
-                                 
-                                    <input type="text" name="Salary_range" placeholder="salary-range" defaultValue={Salary_range} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
+                            </form>
+                        </div>
 
-                                </div>
-                                <div className="form-control">
-                                  
-                                    <input type="text" name="Job_description" placeholder="job-description" defaultValue={Job_description} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
-
-                                </div>
-                                <div className="form-control">
-                                    
-                                    <input type="date" name="Job_posting_date" className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" defaultValue={Job_posting_date} required />
-
-                                </div>
-
-                                <div className="form-control">
-                                    
-                                    <input type="text" name="Job_application_number" placeholder="Applicants Number" defaultValue={Job_applicants_number}  className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
-
-                                </div>
-                            </div>
-                            <div className="form-control mt-10">
-                                <button className="btn bg-gray-400 font-bold text-slate-900 hover:text-white hover:bg-slate-800">Update</button>
-                            </div>
-
-                        </form>
                     </div>
                 </div>
             </div>

@@ -9,7 +9,7 @@ const Navbar = ({ darkMode, toggleTheme }) => {
     const { user, logOut, loading } = useContext(AuthContext);
 
 
-    console.log(user ? user.role : null)
+    //console.log(user ? user.role : null)
 
     const navLink = (
         <>
@@ -84,10 +84,10 @@ const Navbar = ({ darkMode, toggleTheme }) => {
                 <div className="navbar-end">
                     {user ? (
                         <>
-                            <div className="tooltip tooltip-right z-20  hover:tooltip-open" data-tip={user.displayName}>
-                                <img src={user.photoURL} className="lg:ml-40 w-1/3 md:w-1/4 hidden lg:block rounded-full" alt="User Profile" />
+                            <div className="tooltip tooltip-left z-20  hover:tooltip-open" data-tip={user.displayName}>
+                                <img src={user.photoURL} className="lg:ml-5 w-1/4 md:w-16 hidden lg:block rounded-full" alt="User Profile" />
                             </div>
-                            <a onClick={handleLogout} className="btn btn-sm">Log out</a>
+                            <a onClick={handleLogout} className="btn btn-sm ml-4">Log out</a>
                         </>
                     ) : (
                         <div className="relative text-center" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>

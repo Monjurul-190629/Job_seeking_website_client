@@ -1,17 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../Pages/Shared/Navbar";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Footer from "../Pages/Shared/Footer";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Main = () => {
 
    // For dark light theme toggle
-   const [darkMode, setDarkMode] = useState(false);
-
-   const toggleTheme = () => {
-       setDarkMode(!darkMode);
-   };
+   /// darkMode
+   const {toggleTheme, darkMode} = useContext(AuthContext)
 
 
     return (
