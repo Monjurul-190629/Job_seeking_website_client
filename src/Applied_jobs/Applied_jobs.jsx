@@ -26,8 +26,8 @@ const Applied_jobs = () => {
         : jobs.filter(job => job.jobCategory.toLowerCase().trim() === selectedCategory.toLowerCase().trim());
 
     return (
-        <div className="bg-slate-400 text-black py-10 px-5 rounded-xl">
-            <h2 className="text-2xl mb-5 text-center font-bold">Your Jobs: {filteredJobs.length}</h2>
+        <div className="bg-slate-200 text-black py-10 px-5 rounded-xl">
+            <h2 className="text-xl mb-5 text-center font-medium"> My Jobs: {filteredJobs.length}</h2>
             <div className="mb-5">
                 <label htmlFor="category" className="font-bold">Filter by Category:</label>
                 <select
@@ -46,14 +46,14 @@ const Applied_jobs = () => {
 
             {/* Responsive Table */}
             <div className="overflow-x-auto hidden lg:block">
-                <table className="min-w-full bg-white text-black rounded-lg shadow-lg">
+                <table className="min-w-full bg-white text-black shadow-lg">
                     <thead>
-                        <tr className="bg-slate-500 text-white">
-                            <th className="py-4 px-6 text-left font-semibold">Job Category</th>
+                        <tr className="bg-blue-500 text-white rounded-xl">
+                            <th className="py-4 px-6 text-left font-semibold rounded-tl-xl">Job Category</th>
                             <th className="py-4 px-6 text-left font-semibold">Job Title</th>
                             <th className="py-4 px-6 text-left font-semibold">Job Description</th>
                             <th className="py-4 px-6 text-left font-semibold">Salary Range</th>
-                            <th className="py-4 px-6 text-left font-semibold">Resume Link</th>
+                            <th className="py-4 px-6 text-left font-semibold rounded-tr-xl">Resume Link</th>
                         </tr>
                     </thead>
                     <tbody>

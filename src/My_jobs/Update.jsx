@@ -77,68 +77,51 @@ const Update = () => {
 
             <div className="hero min-h-screen">
 
-                <div className="hero-content flex-col lg:flex-row-reverse ">
-                    <div className="card shrink-0 w-full  shadow-2xl bg-gray-400 px-5 md:px-20 py-10">
-                        <form className="card-body text-slate-900 font-bold" onSubmit={handleUpdate} >
-                            <h1 className="text-3xl underline font-bold text-center my-5">Update Job</h1>
-                            <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <div className="card shrink-0 w-full  shadow-2xl border-2 border-slate-400 px-5 md:px-5 py-5">
+                        <form className="card-body text-black px-10" onSubmit={handleUpdate} >
+                            <h1 className="text-2xl font-bold text-center mb-5">Update Job</h1>
+                            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                                 <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-slate-900">Banner Url</span>
-                                    </label>
-                                    <input type="text" name="banner_url" placeholder="Banner url" defaultValue={Banner_url} className="input input-bordered text-black" required />
+                                    <input type="text" name="banner_url" placeholder="Banner url" defaultValue={Banner_url} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
                                 </div>
                                 <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-slate-900">Job Title</span>
-                                    </label>
-                                    <input type="text" name="job_title" placeholder="Job title" defaultValue={Job_title} className="input input-bordered text-black" required />
+                                    
+                                    <input type="text" name="job_title" placeholder="Job title" defaultValue={Job_title} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
                                 </div>
                                 <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-slate-900">Name</span>
-                                    </label>
-                                    <input type="text" name="name" placeholder="Name" defaultValue={name} className="input input-bordered text-black" required />
+                                   
+                                    <input type="text" name="name" placeholder="Name" defaultValue={name} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
                                 </div>
                                 <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-slate-900">Email</span>
-                                    </label>
-                                    <input type="email" name="email" placeholder="email" defaultValue={email} className="input input-bordered text-black" required />
+                                    
+                                    <input type="email" name="email" placeholder="email" defaultValue={email} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
                                 </div>
 
                                 <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-slate-900">Salary range</span>
-                                    </label>
-                                    <input type="text" name="Salary_range" placeholder="salary-range" defaultValue={Salary_range} className="input input-bordered text-black" required />
+                                 
+                                    <input type="text" name="Salary_range" placeholder="salary-range" defaultValue={Salary_range} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
 
                                 </div>
                                 <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-slate-900">Job description</span>
-                                    </label>
-                                    <input type="text" name="Job_description" placeholder="job-description" defaultValue={Job_description} className="input input-bordered text-black" required />
+                                  
+                                    <input type="text" name="Job_description" placeholder="job-description" defaultValue={Job_description} className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
 
                                 </div>
                                 <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-slate-900">Job Posting Date</span>
-                                    </label>
-                                    <input type="date" name="Job_posting_date" className="input input-bordered text-black" defaultValue={Job_posting_date} required />
+                                    
+                                    <input type="date" name="Job_posting_date" className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" defaultValue={Job_posting_date} required />
 
                                 </div>
 
                                 <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text text-slate-900">Job Applicants Number</span>
-                                    </label>
-                                    <input type="text" name="Job_application_number" placeholder="Applicants Number" defaultValue={Job_applicants_number}  className="input input-bordered text-black" required />
+                                    
+                                    <input type="text" name="Job_application_number" placeholder="Applicants Number" defaultValue={Job_applicants_number}  className="text-black border-b-2 border-slate-500 outline-0 py-2 w-[200px] placeholder-slate-600 bg-[#ede9ff]" required />
 
                                 </div>
                             </div>
                             <div className="form-control mt-10">
-                                <button className="btn bg-gray-300 font-bold text-slate-900 hover:text-white hover:bg-slate-800">Update</button>
+                                <button className="btn bg-gray-400 font-bold text-slate-900 hover:text-white hover:bg-slate-800">Update</button>
                             </div>
 
                         </form>

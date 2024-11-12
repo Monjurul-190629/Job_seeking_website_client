@@ -47,7 +47,7 @@ const Table = ({ job }) => {
             <td className="md:w-60 p-2 md:p-5">
                 <p className="md:hidden font-semibold">Details</p>
                 <Link to={`/ViewDetails/${_id}`}>
-                    <button className="btn bg-slate-500 text-white font-bold hover:text-black mt-2 md:mt-0" onClick={showToast}>
+                    <button className="btn bg-blue-500 text-white font-bold hover:text-black mt-2 md:mt-0" onClick={showToast}>
                         View Details
                     </button>
                 </Link>

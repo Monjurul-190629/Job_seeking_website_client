@@ -6,7 +6,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 
 const Navbar = ({ darkMode, toggleTheme }) => {
 
-    const { user, logOut } = useContext(AuthContext);
+    const { user, logOut, loading } = useContext(AuthContext);
 
 
     console.log(user ? user.role : null)
@@ -27,11 +27,14 @@ const Navbar = ({ darkMode, toggleTheme }) => {
                 <li><NavLink to="/My_jobs">My Jobs</NavLink></li>
             )}
 
-            <li><NavLink to="*">Not_Founded_Page</NavLink></li>
+           
         </>
     );
 
-
+    
+    if(loading){
+        <span className="loading loading-infinity loading-lg text-blue-900"></span>
+    }
 
 
 
@@ -81,8 +84,8 @@ const Navbar = ({ darkMode, toggleTheme }) => {
                 <div className="navbar-end">
                     {user ? (
                         <>
-                            <div className="tooltip tooltip-bottom  hover:tooltip-open" data-tip={user.displayName}>
-                                <img src={user.photoURL} className="ml-12 w-1/3 md:w-1/4 hidden lg:block" alt="User Profile" />
+                            <div className="tooltip tooltip-right z-20  hover:tooltip-open" data-tip={user.displayName}>
+                                <img src={user.photoURL} className="lg:ml-40 w-1/3 md:w-1/4 hidden lg:block rounded-full" alt="User Profile" />
                             </div>
                             <a onClick={handleLogout} className="btn btn-sm">Log out</a>
                         </>

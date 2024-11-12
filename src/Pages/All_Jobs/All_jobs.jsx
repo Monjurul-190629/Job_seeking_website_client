@@ -1,13 +1,20 @@
 import { useLoaderData } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Table from "./Table";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Alljobs = () => {
     const alljobs = useLoaderData();
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 5;
 
-    console.log(alljobs); // Check if it's an array
+    const {loading} = useContext(AuthContext);
+
+    if(loading){
+        <span className="loading loading-infinity loading-lg text-blue-700"></span>
+    }
+
+    ///console.log(alljobs); // Check if it's an array
 
     // Pagination calculations
     const indexOfLastItem = currentPage * itemsPerPage;
@@ -24,13 +31,14 @@ const Alljobs = () => {
                 {/* Head */}
                 <thead className="hidden md:table-header-group">
                     <tr className="bg-transparent">
-                        <th className="md:w-60 p-3 underline text-xl md:text-2xl">Job Title</th>
-                        <th className="md:w-60 p-3 underline text-xl md:text-2xl">Job Posting Date</th>
-                        <th className="md:w-60 p-3 underline text-xl md:text-2xl">Application Deadline</th>
-                        <th className="md:w-60 p-3 underline text-xl md:text-2xl">Salary Range</th>
-                        <th className="md:w-60 p-3 underline text-xl md:text-2xl">Details</th>
+                        <th className="md:w-60 p-3   text-xl md:text-xl">Job Title</th>
+                        <th className="md:w-60 p-3  text-xl md:text-xl">Job Posting Date</th>
+                        <th className="md:w-60 p-3  text-xl md:text-xl">Application Deadline</th>
+                        <th className="md:w-60 p-3  text-xl md:text-xl">Salary Range</th>
+                        <th className="md:w-60 p-3  text-xl md:text-xl">Details</th>
                     </tr>
                 </thead>
+                
 
                 <tbody className="flex flex-col gap-4 md:table-row-group">
                     {currentItems.length > 0 ? (
@@ -51,7 +59,7 @@ const Alljobs = () => {
                     <button
                         key={index + 1}
                         onClick={() => paginate(index + 1)}
-                        className={`px-3 py-1 border rounded ${currentPage === index + 1 ? 'bg-slate-500 text-white' : 'bg-white text-slate-500'}`}
+                        className={`px-3 py-1 border rounded ${currentPage === index + 1 ? 'bg-blue-600 text-white' : 'bg-white text-slate-500'}`}
                     >
                         {index + 1}
                     </button>

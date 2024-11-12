@@ -12,20 +12,21 @@ const Table_1 = ({ job, jobes, handleDelete }) => {
 
     return (
         <div>
-
+            
             <tbody>
-                <tr className="">
+                
+                <tr className="text-[15px] font-normal">
                     <th className="md:w-60 p-5">{Job_title}</th>
                     <th className="md:w-60">{Job_posting_date}</th>
                     <th className="md:w-60">{applicationDeadline}</th>
                     <th className="md:w-60">{Salary_range}</th>
                     <th className="md:w-60">
-                        <Link to = {`/update/${_id}`}>
-                            <button className="px-2 py-1 bg-orange-800 hover:bg-gray-400 hover:text-black text-white hover:border-1 hover:border-black font-bold mx-2 rounded-lg">
+                        <Link to={`/update/${_id}`}>
+                            <button className="px-2 py-1 bg-blue-800 hover:bg-gray-400 hover:text-black text-white hover:border-1 hover:border-black font-bold mx-2 rounded-lg">
                                 Update
                             </button>
                         </Link>
-                        <button onClick={() => handleDelete(_id)} className="px-2 py-1 bg-orange-800 hover:bg-gray-400 hover:text-black hover:border-1 hover:border-black text-white font-bold rounded-lg">
+                        <button onClick={() => handleDelete(_id)} className="px-2 py-1 bg-red-500 hover:bg-gray-400 hover:text-black hover:border-1 hover:border-black text-white font-bold rounded-lg">
                             Delete
                         </button>
                     </th>

@@ -54,16 +54,17 @@ const My_jobs = () => {
             <div>
                 <div>
                     <div className="">
-                        <table className="">
+                        <table className="mx-auto">
                             {/* head */}
                             <thead className="flex flex-col justify-center items-center ">
-                                <tr className="mb-10">
-                                    <th className="md:w-60 underline text-xl md:text-2xl">Job Title</th>
-                                    <th className="md:w-60 underline text-xl md:text-2xl">Job Posting Date</th>
-                                    <th className="md:w-60 underline text-xl md:text-2xl">Application Deadline</th>
-                                    <th className="md:w-60 underline text-xl md:text-2xl">Salary Range</th>
-                                    <th className="md:w-60 underline text-xl md:text-2xl">Details</th>
+                                <tr className="mb-1">
+                                    <th className="md:w-60 text-xl md:text-xl">Job Title</th>
+                                    <th className="md:w-60 text-xl md:text-xl">Job Posting Date</th>
+                                    <th className="md:w-60 text-xl md:text-xl">Application Deadline</th>
+                                    <th className="md:w-60 text-xl md:text-xl">Salary Range</th>
+                                    <th className="md:w-60 text-xl md:text-xl">Details</th>
                                 </tr>
+                                <div className="divider divider-neutral"></div>
                             </thead>
                             <tbody className="flex flex-col justify-center items-center mb-10">
                                 {
