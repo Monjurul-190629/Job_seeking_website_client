@@ -1,41 +1,44 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const Table_1 = ({ job, jobes, handleDelete }) => {
-
+const Table_1 = ({ job, handleDelete }) => {
     const {
         Job_title,
         Salary_range,
         Job_posting_date,
         applicationDeadline,
-        _id
+        _id,
     } = job;
 
     return (
-        <div>
-            
-            <tbody>
-                
-                <tr className="text-[15px] font-normal">
-                    <th className="md:w-60 p-5">{Job_title}</th>
-                    <th className="md:w-60">{Job_posting_date}</th>
-                    <th className="md:w-60">{applicationDeadline}</th>
-                    <th className="md:w-60">{Salary_range}</th>
-                    <th className="md:w-60">
-                        <Link to={`/update/${_id}`}>
-                            <button className="px-2 py-1 bg-blue-800 hover:bg-gray-400 hover:text-black text-white hover:border-1 hover:border-black font-bold mx-2 rounded-lg">
-                                Update
-                            </button>
-                        </Link>
-                        <button onClick={() => handleDelete(_id)} className="px-2 py-1 bg-red-500 hover:bg-gray-400 hover:text-black hover:border-1 hover:border-black text-white font-bold rounded-lg">
-                            Delete
-                        </button>
-                    </th>
-                </tr>
-            </tbody>
+        <tr className="text-sm md:text-base border-b">
+            {/* Job Title */}
+            <td className="px-4 py-2 text-gray-800">{Job_title}</td>
 
-        </div>
+            {/* Posting Date */}
+            <td className="px-4 py-2 text-gray-600">{Job_posting_date}</td>
+
+            {/* Application Deadline */}
+            <td className="px-4 py-2 text-gray-600">{applicationDeadline}</td>
+
+            {/* Salary Range */}
+            <td className="px-4 py-2 text-gray-600">{Salary_range}</td>
+
+            {/* Action Buttons */}
+            <td className="px-4 py-2">
+                <Link to={`/update/${_id}`}>
+                    <button className="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded mr-2">
+                        Update
+                    </button>
+                </Link>
+                <button
+                    onClick={() => handleDelete(_id)}
+                    className="px-3 py-1 bg-red-500 hover:bg-red-600 text-white rounded"
+                >
+                    Delete
+                </button>
+            </td>
+        </tr>
     );
 };
 
 export default Table_1;
-

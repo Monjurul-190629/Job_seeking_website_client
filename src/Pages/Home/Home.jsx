@@ -16,7 +16,7 @@ const Home = () => {
     transition={{ duration: 2.1 }}
     className="p-4 sm:p-8 rounded-lg shadow-lg"
 >
-    <div className="bg-gradient-to-r from-blue-200 to-slate-500 text-slate-900 rounded-xl my-6 sm:my-10 p-4 sm:p-10 text-justify">
+    <div className="bg-gradient-to-r from-blue-100 to-slate-200 text-slate-900 rounded-xl my-6 sm:my-10 p-4 sm:p-10 text-justify">
         <div className="flex flex-col lg:flex-row-reverse gap-5 sm:gap-10 md:justify-center">
             <div className="flex-1 flex justify-center">
                 <img 

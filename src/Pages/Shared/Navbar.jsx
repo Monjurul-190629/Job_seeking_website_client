@@ -67,8 +67,8 @@ const Navbar = ({ darkMode, toggleTheme }) => {
                         </div>
                     </div>
                     <div className="flex lg:hidden justify-center items-center w-[200px] ml-4">
-                        <img src="https://png.pngtree.com/png-clipart/20200709/original/pngtree-abstract-s-letter-circle-vector-logo-design-alphabet-circle-logo-vector-png-image_3611616.jpg" className="w-2/3" alt="Logo" />
-                        <p className="text-xl md:text-2xl font-bold text-purple-800">SkillTrackers</p>
+                        <img src="https://png.pngtree.com/png-clipart/20200709/original/pngtree-abstract-s-letter-circle-vector-logo-design-alphabet-circle-logo-vector-png-image_3611616.jpg" className="w-16" alt="Logo" />
+                        <p className="text-[16px] md:text-2xl font-bold text-purple-800">SkillTrackers</p>
                     </div>
                 </div>
 
